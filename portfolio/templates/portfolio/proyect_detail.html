@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Portfolio | {{ project.title }} {% endblock %}
+
+{% block background %} {{ project.bg_image.url }} {% endblock %}
+
+{% block headers %}
+    <h1>{{ project.title }}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row col-lg-12">
+        <h1 class="mb-3 col-12">About {{ project.title }}</h1>
+        <div class="col-lg-2"></div>
+        <p class="col-lg-8 mt-4 mb-4">
+            {{ project.long_description|safe }}
+        </p>
+        <img src="{{ project.detail_image.url }}" alt="" class="card-img shadow">
+    </div>
+{% endblock %}

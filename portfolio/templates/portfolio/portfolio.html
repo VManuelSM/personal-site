@@ -1,0 +1,53 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Home | Portfolio {% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Portfolio</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row col-lg-12">
+         <div class="col-lg-6 p-3">
+                <h1>Projects</h1>
+                {% for project in projects %}
+                    <!-- Proyecto -->
+                    <div class="mt-4 p-3 row project">
+                        <p>
+                        </p>
+                        <div class="col-lg-3 col-md-4 offset-lg-1">
+                            <img class="img-fluid d-none d-md-block" src="{{ project.list_image.url }}" alt="">
+                        </div>
+                        <div class="col-lg-7 col-md-8">
+                            <h2 class="section-heading title">{{ project.title }}</h2>
+                            <p style="font-size: 16px">{{ project.short_description|safe }}</p>
+                            <a href="{% url 'proyect' project.id project.title|slugify %}" class="btn-link">Read more</a>
+                            {% if project.link %}
+                                <p><a href="{{ project.link }}">Más información</a></p>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+    <div class="col-lg-5 p-3">
+            <h1>Technologies</h1>
+            {% for technology in technologies %}
+                <!-- Technologies -->
+                <div class="row project">
+                <p>
+                </p>
+                <div class="col-lg-3 col-md-4 offset-lg-1">
+                    <img class="img-fluid d-none d-md-block" src="{{ technology.list_image.url }}" alt="">
+                </div>
+                <div class="col-lg-7 col-md-8">
+                    <h2 class="section-heading title">{{ technology.title }}</h2>
+                    <p style="font-size: 16px">{{ technology.short_description|safe }}</p>
+                </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

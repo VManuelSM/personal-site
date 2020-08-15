@@ -1,0 +1,11 @@
+.shadow {
+    -webkit-box-shadow: 13px 13px 30px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 13px 13px 30px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 13px 13px 30px -5px rgba(0, 0, 0, 0.75);
+}
+
+.shadow-card {
+    -webkit-box-shadow: 3px 12px 31px -11px rgba(66, 66, 66, 0.62);
+    -moz-box-shadow: 3px 12px 31px -11px rgba(66, 66, 66, 0.62);
+    box-shadow: 3px 12px 31px -11px rgba(66, 66, 66, 0.62);
+}

@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Home | Contacto {% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
+
+{% block headers %} 
+<h1>Contact me</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+          <h1 class="mb-4">Contact information</h1>
+          <p><b>Email:</b> <a href="mailto:vctr.mnl.s.m@gmail.com">vctr.mnl.s.m@gmail.com</a></p>
+          <p><b>Phone:</b> <a href="tel:+527761045406">+52 776 104 54 06</a></p>
+    </div>
+</div>
+{% endblock %}
